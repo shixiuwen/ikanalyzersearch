@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_tv_des"
+        android:text="搜索目的地"
+        android:textSize="20sp"/>
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_et_des"
+        android:layout_toRightOf="@id/id_tv_des"
+        android:layout_alignBaseline="@id/id_tv_des"
+        android:layout_marginLeft="10dp"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_btn_search"
+        android:text="搜索"
+        android:textSize="16sp"
+        android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_tv_show"
+        android:text="匹配结果如下"
+        android:textSize="20sp"
+        android:layout_below="@id/id_tv_des"
+        android:layout_marginTop="10dp"/>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_lv_result"
+        android:layout_below="@id/id_tv_show"
+        android:layout_above="@id/id_btn_search"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+</RelativeLayout>
