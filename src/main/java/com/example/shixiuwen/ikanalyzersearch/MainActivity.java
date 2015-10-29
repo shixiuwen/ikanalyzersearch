@@ -1,5 +1,7 @@
 package com.example.shixiuwen.ikanalyzersearch;
 
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -24,6 +26,8 @@ public class MainActivity extends ActionBarActivity {
     IKSegmenter ik;
     StringBuilder sb;
 
+
+
     int count01, count02, count03, count04, count05, count06;
 
     private String[] destination = null;
@@ -32,6 +36,11 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        PackageManager manager = getPackageManager();
+
+        ApplicationInfo applicationInfo = manager.getApplicationInfo("", 0);
+        applicationInfo.targetSdkVersion;
 
         etSearch = (EditText) findViewById(R.id.id_et_des);
         btnSearch = (Button) findViewById(R.id.id_btn_search);
